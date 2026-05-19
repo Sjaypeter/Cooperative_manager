@@ -1,0 +1,12 @@
+2026-05-19 18:28:27,211 Worker rq:worker:d9b25d0b0f684d54b60b790bc871d735 started with PID 18029, version 1.15.1
+2026-05-19 18:28:27,211 Subscribing to channel rq:pubsub:d9b25d0b0f684d54b60b790bc871d735
+2026-05-19 18:28:27,212 *** Listening on home-sjayp-Cooperative_manager-coop-bench:short, home-sjayp-Cooperative_manager-coop-bench:default, home-sjayp-Cooperative_manager-coop-bench:long...
+2026-05-19 18:28:27,213 Cleaning registries for queue: home-sjayp-Cooperative_manager-coop-bench:short
+2026-05-19 18:28:27,216 Cleaning registries for queue: home-sjayp-Cooperative_manager-coop-bench:default
+2026-05-19 18:28:27,217 Cleaning registries for queue: home-sjayp-Cooperative_manager-coop-bench:long
+2026-05-19 18:29:51,927 home-sjayp-Cooperative_manager-coop-bench:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.user.user.create_contact', kwargs={'user': <User: sjaypeter.sjp@gmail.com>, 'ignore_mandatory': True}, method='frappe.core.doctype.user.user.create_contact', site='coop.localhost', user='Administrator') (coop.localhost::83c5619d-9f14-43f9-9dbc-067205943cda)
+2026-05-19 18:29:53,898 home-sjayp-Cooperative_manager-coop-bench:default: Job OK (coop.localhost::83c5619d-9f14-43f9-9dbc-067205943cda)
+2026-05-19 18:29:53,899 Result is kept for 600 seconds
+2026-05-19 18:29:53,909 home-sjayp-Cooperative_manager-coop-bench:default: frappe.utils.background_jobs.execute_job(event=None, is_async=True, job_name='frappe.core.doctype.user.user.update_gravatar', kwargs={'name': 'sjaypeter.sjp@gmail.com'}, method='frappe.core.doctype.user.user.update_gravatar', site='coop.localhost', user='Administrator') (coop.localhost::db16f77a-4d58-4406-8583-97a92622369b)
+2026-05-19 18:29:55,343 home-sjayp-Cooperative_manager-coop-bench:default: Job OK (coop.localhost::db16f77a-4d58-4406-8583-97a92622369b)
+2026-05-19 18:29:55,344 Result is kept for 600 seconds

@@ -1,0 +1,30 @@
+2026-05-19 18:18:57,366 DEBUG cd coop-bench && uv venv env --seed --python python3
+2026-05-19 18:19:05,149 LOG Getting frappe
+2026-05-19 18:19:05,149 DEBUG cd coop-bench/apps && git clone https://github.com/frappe/frappe.git --branch version-15 --depth 1 --origin upstream
+2026-05-19 18:19:28,254 LOG Installing frappe
+2026-05-19 18:19:28,255 DEBUG cd /home/sjayp/Cooperative_manager/coop-bench && uv pip install --quiet --upgrade -e /home/sjayp/Cooperative_manager/coop-bench/apps/frappe  --python /home/sjayp/Cooperative_manager/coop-bench/env/bin/python
+2026-05-19 18:19:39,816 DEBUG cd /home/sjayp/Cooperative_manager/coop-bench/apps/frappe && yarn install --check-files
+2026-05-19 18:19:56,479 DEBUG cd coop-bench && bench build
+2026-05-19 18:19:56,748 INFO /home/sjayp/.local/bin/bench build
+2026-05-19 18:20:27,337 LOG setting up backups
+2026-05-19 18:20:27,775 LOG backups were set up
+2026-05-19 18:20:27,775 INFO Bench coop-bench initialized
+2026-05-19 18:23:11,991 INFO /home/sjayp/.local/bin/bench new-app coop_manager
+2026-05-19 18:23:12,024 LOG creating new app coop_manager
+2026-05-19 18:24:47,890 LOG Installing coop_manager
+2026-05-19 18:24:47,891 DEBUG cd /home/sjayp/Cooperative_manager/coop-bench && uv pip install --quiet --upgrade -e /home/sjayp/Cooperative_manager/coop-bench/apps/coop_manager  --python /home/sjayp/Cooperative_manager/coop-bench/env/bin/python
+2026-05-19 18:24:49,207 DEBUG bench build --app coop_manager
+2026-05-19 18:24:49,354 INFO /home/sjayp/.local/bin/bench build --app coop_manager
+2026-05-19 18:25:40,795 INFO /home/sjayp/.local/bin/bench --site coop.localhost install-app coop_manager
+2026-05-19 18:26:09,972 INFO /home/sjayp/.local/bin/bench new-site coop.localhost
+2026-05-19 18:27:11,908 INFO /home/sjayp/.local/bin/bench get-app frappe --branch version-15
+2026-05-19 18:27:32,621 INFO /home/sjayp/.local/bin/bench --site coop.localhost install-app coop_manager
+2026-05-19 18:28:26,223 INFO /home/sjayp/.local/bin/bench start
+2026-05-19 18:28:26,631 INFO /home/sjayp/.local/bin/bench schedule
+2026-05-19 18:28:26,633 INFO /home/sjayp/.local/bin/bench serve --port 8000
+2026-05-19 18:28:26,642 INFO /home/sjayp/.local/bin/bench watch
+2026-05-19 18:28:26,675 INFO /home/sjayp/.local/bin/bench worker
+2026-05-19 18:31:20,681 INFO /home/sjayp/.local/bin/bench --site coop.localhost make-doctype Coop Member --module Cooperative Manager --custom
+2026-05-19 18:31:21,144 INFO /home/sjayp/.local/bin/bench --site coop.localhost make-doctype Coop Contribution --module Cooperative Manager --custom
+2026-05-19 18:31:21,549 INFO /home/sjayp/.local/bin/bench --site coop.localhost make-doctype Coop Loan --module Cooperative Manager --custom
+2026-05-19 18:31:21,988 INFO /home/sjayp/.local/bin/bench --site coop.localhost make-doctype Coop Loan Repayment --module Cooperative Manager --custom
