@@ -127,11 +127,15 @@ coop_manager/
 **Member Statement Report** (required)
 - Shows all members with their total contributions, total loans disbursed, total repaid, and outstanding balance in a single view
 - Filterable by individual member
+  <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5571d97c-c31d-4e55-b2c1-6524e9bffe90" />
+
 
 **Loan Status Report** (stretch goal — delivered)
 - Shows all non-cancelled loans across the cooperative
 - Columns: Loan ID, Member, Loan Amount, Monthly Repayment, Total Repaid, Outstanding Balance, Status
 - Filterable by member and status
+  <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/478d8273-5b2a-4887-9b6a-a50ccf4efcf3" />
+
 
 ---
 
