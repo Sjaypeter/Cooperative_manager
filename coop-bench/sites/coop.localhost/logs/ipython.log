@@ -43,3 +43,8 @@
 2026-05-20 21:05:03,766 INFO ipython frappe.db.commit()
 2026-05-20 21:05:03,766 INFO ipython print("Done")
 2026-05-20 21:05:03,766 INFO ipython === session end ===
+2026-05-20 22:08:19,228 INFO ipython === bench console session ===
+2026-05-20 22:08:19,229 INFO ipython import json
+2026-05-20 22:08:19,229 INFO ipython doc = frappe.get_doc("DocType", "Coop Loan")
+2026-05-20 22:08:19,229 INFO ipython print(json.dumps(doc.as_dict(), indent=2, default=str))
+2026-05-20 22:08:19,229 INFO ipython === session end ===
