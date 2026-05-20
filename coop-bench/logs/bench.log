@@ -58,3 +58,5 @@
 2026-05-20 11:13:13,838 INFO /home/sjayp/.local/bin/bench --site coop.localhost clear-cache
 2026-05-20 11:13:23,900 INFO /home/sjayp/.local/bin/bench restart
 2026-05-20 11:17:06,094 INFO /home/sjayp/.local/bin/bench --site coop.localhost console
+2026-05-20 15:43:30,542 INFO /home/sjayp/.local/bin/bench --site coop.localhost clear-cache
+2026-05-20 15:43:42,134 INFO /home/sjayp/.local/bin/bench restart
