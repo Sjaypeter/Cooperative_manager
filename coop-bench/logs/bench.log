@@ -1,0 +1,86 @@
+2026-05-20 02:17:43,686 DEBUG cd coop-bench && uv venv env --seed --python python3
+2026-05-20 02:17:50,188 LOG Getting frappe
+2026-05-20 02:17:50,188 DEBUG cd coop-bench/apps && git clone https://github.com/frappe/frappe.git --branch version-15 --depth 1 --origin upstream
+2026-05-20 02:18:09,915 LOG Installing frappe
+2026-05-20 02:18:09,917 DEBUG cd /home/sjayp/Cooperative_manager/coop-bench && uv pip install --quiet --upgrade -e /home/sjayp/Cooperative_manager/coop-bench/apps/frappe  --python /home/sjayp/Cooperative_manager/coop-bench/env/bin/python
+2026-05-20 02:18:40,932 DEBUG cd /home/sjayp/Cooperative_manager/coop-bench/apps/frappe && yarn install --check-files
+2026-05-20 02:18:58,997 DEBUG cd coop-bench && bench build
+2026-05-20 02:18:59,137 INFO /home/sjayp/.local/bin/bench build
+2026-05-20 02:19:31,131 LOG setting up backups
+2026-05-20 02:19:31,140 LOG backups were set up
+2026-05-20 02:19:31,140 INFO Bench coop-bench initialized
+2026-05-20 02:19:56,753 INFO /home/sjayp/.local/bin/bench new-site mysite.localhost
+2026-05-20 02:21:02,004 INFO /home/sjayp/.local/bin/bench get-app erpnext --branch version-15
+2026-05-20 02:21:03,290 LOG Getting erpnext
+2026-05-20 02:21:03,290 DEBUG cd ./apps && git clone https://github.com/frappe/erpnext.git --branch version-15 --depth 1 --origin upstream
+2026-05-20 02:21:32,478 LOG Installing erpnext
+2026-05-20 02:21:32,479 DEBUG cd /home/sjayp/Cooperative_manager/coop-bench && uv pip install --quiet --upgrade -e /home/sjayp/Cooperative_manager/coop-bench/apps/erpnext  --python /home/sjayp/Cooperative_manager/coop-bench/env/bin/python
+2026-05-20 02:21:54,334 DEBUG cd /home/sjayp/Cooperative_manager/coop-bench/apps/erpnext && yarn install --check-files
+2026-05-20 02:22:03,655 DEBUG bench build --app erpnext
+2026-05-20 02:22:03,797 INFO /home/sjayp/.local/bin/bench build --app erpnext
+2026-05-20 02:22:08,819 INFO /home/sjayp/.local/bin/bench --site mysite.localhost install-app erpnext
+2026-05-20 02:24:10,458 INFO /home/sjayp/.local/bin/bench new-app coop_manager
+2026-05-20 02:24:10,463 LOG creating new app coop_manager
+2026-05-20 02:25:20,714 LOG Installing coop_manager
+2026-05-20 02:25:20,716 DEBUG cd /home/sjayp/Cooperative_manager/coop-bench && uv pip install --quiet --upgrade -e /home/sjayp/Cooperative_manager/coop-bench/apps/coop_manager  --python /home/sjayp/Cooperative_manager/coop-bench/env/bin/python
+2026-05-20 02:25:22,081 DEBUG bench build --app coop_manager
+2026-05-20 02:25:22,212 INFO /home/sjayp/.local/bin/bench build --app coop_manager
+2026-05-20 02:26:32,212 INFO /home/sjayp/.local/bin/bench --site coop.localhost install-app coop_manager
+2026-05-20 02:27:49,563 INFO /home/sjayp/.local/bin/bench new-site coop.localhost --install-app frappe
+2026-05-20 02:28:14,835 INFO /home/sjayp/.local/bin/bench --site coop.localhost install-app coop_manager
+2026-05-20 02:29:08,928 INFO /home/sjayp/.local/bin/bench drop-site coop.localhost --force
+2026-05-20 02:30:30,116 INFO /home/sjayp/.local/bin/bench --site coop.localhost install-app coop_manager
+2026-05-20 02:30:48,545 INFO /home/sjayp/.local/bin/bench --site coop.localhost install-app coop_manager
+2026-05-20 02:31:18,306 INFO /home/sjayp/.local/bin/bench new-site coop.localhost
+2026-05-20 02:32:19,767 INFO /home/sjayp/.local/bin/bench --site coop.localhost install-app coop_manager
+2026-05-20 02:34:27,443 INFO /home/sjayp/.local/bin/bench start
+2026-05-20 02:34:27,873 INFO /home/sjayp/.local/bin/bench serve --port 8000
+2026-05-20 02:34:27,890 INFO /home/sjayp/.local/bin/bench worker
+2026-05-20 02:34:27,895 INFO /home/sjayp/.local/bin/bench schedule
+2026-05-20 02:34:27,914 INFO /home/sjayp/.local/bin/bench watch
+2026-05-20 10:31:00,799 INFO /home/sjayp/.local/bin/bench --site coop.localhost set-config developer_mode 1
+2026-05-20 10:31:11,784 INFO /home/sjayp/.local/bin/bench --site coop.localhost clear-cache
+2026-05-20 10:49:15,567 INFO /home/sjayp/.local/bin/bench --site coop.localhost migrate
+2026-05-20 10:49:44,415 INFO /home/sjayp/.local/bin/bench --site coop.localhost clear-cache
+2026-05-20 10:49:49,592 INFO /home/sjayp/.local/bin/bench restart
+2026-05-20 10:50:00,534 INFO /home/sjayp/.local/bin/bench start
+2026-05-20 10:50:01,609 INFO /home/sjayp/.local/bin/bench watch
+2026-05-20 10:50:01,618 INFO /home/sjayp/.local/bin/bench serve --port 8000
+2026-05-20 10:50:01,635 INFO /home/sjayp/.local/bin/bench worker
+2026-05-20 10:50:01,656 INFO /home/sjayp/.local/bin/bench schedule
+2026-05-20 10:54:46,617 INFO /home/sjayp/.local/bin/bench --site coop.localhost migrate
+2026-05-20 10:54:58,991 INFO /home/sjayp/.local/bin/bench --site coop.localhost clear-cache
+2026-05-20 10:55:06,785 INFO /home/sjayp/.local/bin/bench restart
+2026-05-20 10:55:15,638 INFO /home/sjayp/.local/bin/bench --site coop.localhost console
+2026-05-20 11:01:06,814 INFO /home/sjayp/.local/bin/bench --site coop.localhost console
+2026-05-20 11:07:00,359 INFO /home/sjayp/.local/bin/bench --site coop.localhost console
+2026-05-20 11:12:32,901 INFO /home/sjayp/.local/bin/bench --site coop.localhost migrate
+2026-05-20 11:13:13,838 INFO /home/sjayp/.local/bin/bench --site coop.localhost clear-cache
+2026-05-20 11:13:23,900 INFO /home/sjayp/.local/bin/bench restart
+2026-05-20 11:17:06,094 INFO /home/sjayp/.local/bin/bench --site coop.localhost console
+2026-05-20 15:43:30,542 INFO /home/sjayp/.local/bin/bench --site coop.localhost clear-cache
+2026-05-20 15:43:42,134 INFO /home/sjayp/.local/bin/bench restart
+2026-05-20 21:03:50,956 INFO /home/sjayp/.local/bin/bench --site coop.localhost console
+2026-05-20 21:05:10,983 INFO /home/sjayp/.local/bin/bench --site coop.localhost console
+2026-05-20 21:09:45,723 INFO /home/sjayp/.local/bin/bench --site coop.localhost execute frappe.db.sql --args "UPDATE `tabCoop Loan` SET monthly_repayment = loan_amount / repayment_period_months WHERE loan_amount > 0 AND repayment_period_months > 0"
+2026-05-20 21:09:46,560 INFO /home/sjayp/.local/bin/bench --site coop.localhost clear-cache
+2026-05-20 21:09:56,297 INFO /home/sjayp/.local/bin/bench restart
+2026-05-20 22:05:12,241 INFO /home/sjayp/.local/bin/bench --site coop.localhost migrate
+2026-05-20 22:06:30,571 INFO /home/sjayp/.local/bin/bench --site coop.localhost execute frappe.client.get --args {'doctype':'DocType','name':'Coop Loan'}
+2026-05-20 22:06:53,678 INFO /home/sjayp/.local/bin/bench --site coop.localhost console
+2026-05-20 22:09:45,866 INFO /home/sjayp/.local/bin/bench --site coop.localhost migrate
+2026-05-20 22:09:50,686 INFO /home/sjayp/.local/bin/bench restart
+2026-05-20 22:17:27,040 INFO /home/sjayp/.local/bin/bench --site coop.localhost clear-cache
+2026-05-20 22:17:30,932 INFO /home/sjayp/.local/bin/bench restart
+2026-05-20 22:19:03,435 INFO /home/sjayp/.local/bin/bench --site coop.localhost console
+2026-05-20 22:20:13,048 INFO /home/sjayp/.local/bin/bench --site coop.localhost console
+2026-05-20 22:20:38,208 INFO /home/sjayp/.local/bin/bench --site coop.localhost clear-cache
+2026-05-20 22:20:43,540 INFO /home/sjayp/.local/bin/bench restart
+2026-05-20 22:21:30,249 INFO /home/sjayp/.local/bin/bench --site coop.localhost clear-cache
+2026-05-20 22:21:31,547 INFO /home/sjayp/.local/bin/bench restart
+2026-05-20 22:22:05,920 INFO /home/sjayp/.local/bin/bench --site coop.localhost clear-cache
+2026-05-20 22:22:07,188 INFO /home/sjayp/.local/bin/bench restart
+2026-05-20 22:22:19,467 INFO /home/sjayp/.local/bin/bench --site coop.localhost console
+2026-05-20 22:26:24,943 INFO /home/sjayp/.local/bin/bench --site coop.localhost clear-cache
+2026-05-20 22:26:29,211 INFO /home/sjayp/.local/bin/bench restart
+2026-05-20 22:28:14,492 INFO /home/sjayp/.local/bin/bench --site coop.localhost build --app coop_manager

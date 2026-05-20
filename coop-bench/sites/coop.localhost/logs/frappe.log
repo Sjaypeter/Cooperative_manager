@@ -1,0 +1,6 @@
+2026-05-20 11:05:41,069 ERROR frappe New Exception collected in error log
+Site: coop.localhost
+Form Dict: {'report_name': 'Member Statement Report', 'filters': '{}', 'ignore_prepared_report': 'false', 'are_default_filters': 'true', 'cmd': 'frappe.desk.query_report.run'}
+2026-05-20 11:06:00,085 ERROR frappe New Exception collected in error log
+Site: coop.localhost
+Form Dict: {'report_name': 'Loan Status Report', 'filters': '{}', 'ignore_prepared_report': 'false', 'are_default_filters': 'true', 'cmd': 'frappe.desk.query_report.run'}

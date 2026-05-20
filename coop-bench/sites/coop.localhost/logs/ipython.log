@@ -1,0 +1,67 @@
+2026-05-20 10:55:35,708 INFO ipython === bench console session ===
+2026-05-20 10:55:35,708 INFO ipython from coop_manager.cooperative_manager.report.member_statement_report.member_statement_report import execute
+2026-05-20 10:55:35,708 INFO ipython print("OK")
+2026-05-20 10:55:35,709 INFO ipython === session end ===
+2026-05-20 11:01:20,726 INFO ipython === bench console session ===
+2026-05-20 11:01:20,727 INFO ipython import frappe
+2026-05-20 11:01:20,727 INFO ipython frappe.set_user("Administrator")
+2026-05-20 11:01:20,727 INFO ipython from coop_manager.cooperative_manager.doctype.coop_loan.coop_loan import disburse
+2026-05-20 11:01:20,727 INFO ipython print(disburse("LOAN-2026-00001"))
+2026-05-20 11:01:20,727 INFO ipython frappe.db.commit()
+2026-05-20 11:01:20,727 INFO ipython === session end ===
+2026-05-20 11:07:36,366 INFO ipython === bench console session ===
+2026-05-20 11:07:36,366 INFO ipython import frappe
+2026-05-20 11:07:36,366 INFO ipython # Check exact field names in the Coop Loan table
+2026-05-20 11:07:36,366 INFO ipython fields = frappe.db.sql("DESCRIBE `tabCoop Loan`", as_dict=True)
+2026-05-20 11:07:36,366 INFO ipython for f in fields:
+        print(f['Field'])
+        exit()
+        
+2026-05-20 11:07:36,366 INFO ipython === session end ===
+2026-05-20 11:17:16,011 INFO ipython === bench console session ===
+2026-05-20 11:17:16,012 INFO ipython import frappe
+2026-05-20 11:17:16,012 INFO ipython frappe.set_user("Administrator")
+2026-05-20 11:17:16,012 INFO ipython from coop_manager.cooperative_manager.doctype.coop_loan.coop_loan import disburse
+2026-05-20 11:17:16,012 INFO ipython print(disburse("LOAN-2026-00001"))
+2026-05-20 11:17:16,013 INFO ipython frappe.db.commit()
+2026-05-20 11:17:16,013 INFO ipython === session end ===
+2026-05-20 21:05:03,740 INFO ipython === bench console session ===
+2026-05-20 21:05:03,764 INFO ipython import frappe
+2026-05-20 21:05:03,764 INFO ipython # Fix all existing loans - recompute monthly repayment and outstanding
+2026-05-20 21:05:03,764 INFO ipython for loan in frappe.get_all("Coop Loan", pluck="name"):
+        doc = frappe.get_doc("Coop Loan", loan)
+            if doc.loan_amount and doc.repayment_period_months:
+                        doc.monthly_repayment = doc.loan_amount / doc.repayment_period_months
+2026-05-20 21:05:03,764 INFO ipython         total_repaid = frappe.db.sql("""
+            SELECT COALESCE(SUM(amount_paid),0) FROM `tabCoop Loan Repayment`
+                WHERE loan=%s AND docstatus=1
+                """, loan)[0][0] or 0
+2026-05-20 21:05:03,765 INFO ipython         doc.total_repaid = total_repaid
+2026-05-20 21:05:03,765 INFO ipython         doc.outstanding_balance = doc.loan_amount - total_repaid
+2026-05-20 21:05:03,765 INFO ipython         doc.save(ignore_permissions=True)
+2026-05-20 21:05:03,765 INFO ipython         print(f"{loan}: loan={doc.loan_amount}, repaid={total_repaid}, outstanding={doc.outstanding_balance}")
+2026-05-20 21:05:03,766 INFO ipython frappe.db.commit()
+2026-05-20 21:05:03,766 INFO ipython print("Done")
+2026-05-20 21:05:03,766 INFO ipython === session end ===
+2026-05-20 22:08:19,228 INFO ipython === bench console session ===
+2026-05-20 22:08:19,229 INFO ipython import json
+2026-05-20 22:08:19,229 INFO ipython doc = frappe.get_doc("DocType", "Coop Loan")
+2026-05-20 22:08:19,229 INFO ipython print(json.dumps(doc.as_dict(), indent=2, default=str))
+2026-05-20 22:08:19,229 INFO ipython === session end ===
+2026-05-20 22:19:24,765 INFO ipython === bench console session ===
+2026-05-20 22:19:24,765 INFO ipython frappe.db.set_value("Coop Loan", "LOAN-00006", "monthly_repayment", 3000/6)
+2026-05-20 22:19:24,765 INFO ipython frappe.db.commit()
+2026-05-20 22:19:24,766 INFO ipython === session end ===
+2026-05-20 22:20:28,060 INFO ipython === bench console session ===
+2026-05-20 22:20:28,061 INFO ipython frappe.db.set_value("Coop Loan", "LOAN-00006", "status", "Approved")
+2026-05-20 22:20:28,062 INFO ipython frappe.db.commit()
+2026-05-20 22:20:28,063 INFO ipython === session end ===
+2026-05-20 22:22:36,038 INFO ipython === bench console session ===
+2026-05-20 22:22:36,038 INFO ipython # Fix all submitted loans that are stuck on Draft
+2026-05-20 22:22:36,038 INFO ipython loans = frappe.db.get_all("Coop Loan", filters={"docstatus": 1, "status": "Draft"}, pluck="name")
+2026-05-20 22:22:36,038 INFO ipython for loan in loans:
+        frappe.db.set_value("Coop Loan", loan, "status", "Approved")
+        frappe.db.commit()
+        print(f"Fixed {len(loans)} loans: {loans}")
+        
+2026-05-20 22:22:36,038 INFO ipython === session end ===
