@@ -48,3 +48,20 @@
 2026-05-20 22:08:19,229 INFO ipython doc = frappe.get_doc("DocType", "Coop Loan")
 2026-05-20 22:08:19,229 INFO ipython print(json.dumps(doc.as_dict(), indent=2, default=str))
 2026-05-20 22:08:19,229 INFO ipython === session end ===
+2026-05-20 22:19:24,765 INFO ipython === bench console session ===
+2026-05-20 22:19:24,765 INFO ipython frappe.db.set_value("Coop Loan", "LOAN-00006", "monthly_repayment", 3000/6)
+2026-05-20 22:19:24,765 INFO ipython frappe.db.commit()
+2026-05-20 22:19:24,766 INFO ipython === session end ===
+2026-05-20 22:20:28,060 INFO ipython === bench console session ===
+2026-05-20 22:20:28,061 INFO ipython frappe.db.set_value("Coop Loan", "LOAN-00006", "status", "Approved")
+2026-05-20 22:20:28,062 INFO ipython frappe.db.commit()
+2026-05-20 22:20:28,063 INFO ipython === session end ===
+2026-05-20 22:22:36,038 INFO ipython === bench console session ===
+2026-05-20 22:22:36,038 INFO ipython # Fix all submitted loans that are stuck on Draft
+2026-05-20 22:22:36,038 INFO ipython loans = frappe.db.get_all("Coop Loan", filters={"docstatus": 1, "status": "Draft"}, pluck="name")
+2026-05-20 22:22:36,038 INFO ipython for loan in loans:
+        frappe.db.set_value("Coop Loan", loan, "status", "Approved")
+        frappe.db.commit()
+        print(f"Fixed {len(loans)} loans: {loans}")
+        
+2026-05-20 22:22:36,038 INFO ipython === session end ===

@@ -68,3 +68,16 @@
 2026-05-20 22:05:12,241 INFO /home/sjayp/.local/bin/bench --site coop.localhost migrate
 2026-05-20 22:06:30,571 INFO /home/sjayp/.local/bin/bench --site coop.localhost execute frappe.client.get --args {'doctype':'DocType','name':'Coop Loan'}
 2026-05-20 22:06:53,678 INFO /home/sjayp/.local/bin/bench --site coop.localhost console
+2026-05-20 22:09:45,866 INFO /home/sjayp/.local/bin/bench --site coop.localhost migrate
+2026-05-20 22:09:50,686 INFO /home/sjayp/.local/bin/bench restart
+2026-05-20 22:17:27,040 INFO /home/sjayp/.local/bin/bench --site coop.localhost clear-cache
+2026-05-20 22:17:30,932 INFO /home/sjayp/.local/bin/bench restart
+2026-05-20 22:19:03,435 INFO /home/sjayp/.local/bin/bench --site coop.localhost console
+2026-05-20 22:20:13,048 INFO /home/sjayp/.local/bin/bench --site coop.localhost console
+2026-05-20 22:20:38,208 INFO /home/sjayp/.local/bin/bench --site coop.localhost clear-cache
+2026-05-20 22:20:43,540 INFO /home/sjayp/.local/bin/bench restart
+2026-05-20 22:21:30,249 INFO /home/sjayp/.local/bin/bench --site coop.localhost clear-cache
+2026-05-20 22:21:31,547 INFO /home/sjayp/.local/bin/bench restart
+2026-05-20 22:22:05,920 INFO /home/sjayp/.local/bin/bench --site coop.localhost clear-cache
+2026-05-20 22:22:07,188 INFO /home/sjayp/.local/bin/bench restart
+2026-05-20 22:22:19,467 INFO /home/sjayp/.local/bin/bench --site coop.localhost console
