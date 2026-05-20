@@ -8,14 +8,24 @@
         "idx": 1,
         "version": "15.107.5"
     },
-    "coop_manager": {
+    "erpnext": {
         "is_repo": true,
         "resolution": {
-            "commit_hash": "e0e88b32850019cb69ec5cffabe69f44f1ff48d3",
-            "branch": "develop"
+            "commit_hash": "47c6bc4b91e351ca7304b8749ea86c23e4c3ce68",
+            "branch": "version-15"
         },
         "required": [],
         "idx": 2,
+        "version": "15.108.1"
+    },
+    "coop_manager": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "90a1da448381823f638b12e98c9fd59bdf85dcf2",
+            "branch": "develop"
+        },
+        "required": [],
+        "idx": 3,
         "version": "0.0.1"
     }
 }
