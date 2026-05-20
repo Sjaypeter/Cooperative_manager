@@ -1,0 +1,21 @@
+2026-05-19 23:02:41,930 ERROR frappe New Exception collected in error log
+Site: coop.localhost
+Form Dict: {'report_name': 'Loan Status Report', 'filters': '{}', 'ignore_prepared_report': 'false', 'are_default_filters': 'true', 'cmd': 'frappe.desk.query_report.run'}
+2026-05-19 23:08:03,633 ERROR frappe New Exception collected in error log
+Site: coop.localhost
+Form Dict: {'report_name': 'Loan Status Report', 'filters': '{}', 'ignore_prepared_report': 'false', 'are_default_filters': 'true', 'cmd': 'frappe.desk.query_report.run'}
+2026-05-19 23:08:15,318 ERROR frappe New Exception collected in error log
+Site: coop.localhost
+Form Dict: {'report_name': 'Loan Status Report', 'filters': '{}', 'ignore_prepared_report': 'false', 'are_default_filters': 'true', 'cmd': 'frappe.desk.query_report.run'}
+2026-05-19 23:20:40,796 ERROR frappe New Exception collected in error log
+Site: coop.localhost
+Form Dict: {'report_name': 'Member Statement Report', 'filters': '{}', 'ignore_prepared_report': 'false', 'are_default_filters': 'true', 'cmd': 'frappe.desk.query_report.run'}
+2026-05-19 23:23:11,645 ERROR frappe New Exception collected in error log
+Site: coop.localhost
+Form Dict: {'report_name': 'Member Statement Report', 'filters': '{}', 'ignore_prepared_report': 'false', 'are_default_filters': 'true', 'cmd': 'frappe.desk.query_report.run'}
+2026-05-20 01:17:55,456 ERROR frappe New Exception collected in error log
+Site: coop.localhost
+Form Dict: {'report_name': 'Loan Status Report', 'filters': '{}', 'ignore_prepared_report': 'false', 'are_default_filters': 'true', 'cmd': 'frappe.desk.query_report.run'}
+2026-05-20 01:24:32,589 ERROR frappe New Exception collected in error log
+Site: coop.localhost
+Form Dict: {'report_name': 'Loan Status Report', 'filters': '{}', 'ignore_prepared_report': 'false', 'are_default_filters': 'true', 'cmd': 'frappe.desk.query_report.run'}

@@ -28,3 +28,94 @@
 2026-05-19 18:31:21,144 INFO /home/sjayp/.local/bin/bench --site coop.localhost make-doctype Coop Contribution --module Cooperative Manager --custom
 2026-05-19 18:31:21,549 INFO /home/sjayp/.local/bin/bench --site coop.localhost make-doctype Coop Loan --module Cooperative Manager --custom
 2026-05-19 18:31:21,988 INFO /home/sjayp/.local/bin/bench --site coop.localhost make-doctype Coop Loan Repayment --module Cooperative Manager --custom
+2026-05-19 19:08:31,804 INFO /home/sjayp/.local/bin/bench migrate
+2026-05-19 19:09:26,457 INFO /home/sjayp/.local/bin/bench --site coop.localhost migrate
+2026-05-19 19:09:56,318 INFO /home/sjayp/.local/bin/bench --site coop.localhost export-fixtures
+2026-05-19 19:10:53,161 INFO /home/sjayp/.local/bin/bench --site coop.localhost export-fixtures
+2026-05-19 19:11:00,837 INFO /home/sjayp/.local/bin/bench start
+2026-05-19 19:11:01,507 INFO /home/sjayp/.local/bin/bench serve --port 8000
+2026-05-19 19:11:01,510 INFO /home/sjayp/.local/bin/bench watch
+2026-05-19 19:11:01,511 INFO /home/sjayp/.local/bin/bench worker
+2026-05-19 19:11:01,546 INFO /home/sjayp/.local/bin/bench schedule
+2026-05-19 19:24:05,213 INFO /home/sjayp/.local/bin/bench --site coop.localhost export-fixtures
+2026-05-19 19:34:59,820 INFO /home/sjayp/.local/bin/bench --site coop.localhost migrate
+2026-05-19 19:40:09,526 INFO /home/sjayp/.local/bin/bench --site coop.localhost migrate
+2026-05-19 19:40:37,951 INFO /home/sjayp/.local/bin/bench --site coop.localhost export-fixtures
+2026-05-19 19:58:06,602 INFO /home/sjayp/.local/bin/bench --site coop.localhost migrate
+2026-05-19 19:58:10,285 INFO /home/sjayp/.local/bin/bench start
+2026-05-19 20:03:51,034 INFO /home/sjayp/.local/bin/bench --site coop.localhost migrate
+2026-05-19 20:06:28,604 INFO /home/sjayp/.local/bin/bench --site coop.localhost migrate
+2026-05-19 20:07:01,487 INFO /home/sjayp/.local/bin/bench start
+2026-05-19 20:07:02,972 INFO /home/sjayp/.local/bin/bench worker
+2026-05-19 20:07:03,003 INFO /home/sjayp/.local/bin/bench watch
+2026-05-19 20:07:03,008 INFO /home/sjayp/.local/bin/bench serve --port 8000
+2026-05-19 20:07:03,037 INFO /home/sjayp/.local/bin/bench schedule
+2026-05-19 22:47:09,699 INFO /home/sjayp/.local/bin/bench --site coop.localhost migrate
+2026-05-19 22:47:30,968 INFO /home/sjayp/.local/bin/bench restart
+2026-05-19 22:48:36,323 INFO /home/sjayp/.local/bin/bench start
+2026-05-19 22:48:36,929 INFO /home/sjayp/.local/bin/bench worker
+2026-05-19 22:48:36,939 INFO /home/sjayp/.local/bin/bench watch
+2026-05-19 22:48:36,941 INFO /home/sjayp/.local/bin/bench schedule
+2026-05-19 22:48:36,943 INFO /home/sjayp/.local/bin/bench serve --port 8000
+2026-05-19 22:53:29,486 INFO /home/sjayp/.local/bin/bench --site coop.localhost clear-cache
+2026-05-19 22:53:37,040 INFO /home/sjayp/.local/bin/bench restart
+2026-05-19 22:53:48,472 INFO /home/sjayp/.local/bin/bench start
+2026-05-19 22:53:48,933 INFO /home/sjayp/.local/bin/bench watch
+2026-05-19 22:53:48,934 INFO /home/sjayp/.local/bin/bench worker
+2026-05-19 22:53:48,934 INFO /home/sjayp/.local/bin/bench serve --port 8000
+2026-05-19 22:53:48,941 INFO /home/sjayp/.local/bin/bench schedule
+2026-05-19 22:57:29,419 INFO /home/sjayp/.local/bin/bench --site coop.local set-config server_script_enabled true
+2026-05-19 22:57:42,913 INFO /home/sjayp/.local/bin/bench --site coop.localhost set-config server_script_enabled true
+2026-05-19 22:57:54,631 INFO /home/sjayp/.local/bin/bench --site coop.localhost clear-cache
+2026-05-19 22:58:04,417 INFO /home/sjayp/.local/bin/bench --site coop.localhost migrate
+2026-05-19 22:58:21,527 INFO /home/sjayp/.local/bin/bench restart
+2026-05-19 22:58:30,155 INFO /home/sjayp/.local/bin/bench start
+2026-05-19 22:58:30,931 INFO /home/sjayp/.local/bin/bench serve --port 8000
+2026-05-19 22:58:30,939 INFO /home/sjayp/.local/bin/bench schedule
+2026-05-19 22:58:30,944 INFO /home/sjayp/.local/bin/bench watch
+2026-05-19 22:58:30,960 INFO /home/sjayp/.local/bin/bench worker
+2026-05-19 23:02:10,293 INFO /home/sjayp/.local/bin/bench --site coop.localhost migrate
+2026-05-19 23:02:24,072 INFO /home/sjayp/.local/bin/bench restart
+2026-05-19 23:07:35,405 INFO /home/sjayp/.local/bin/bench --site coop.localhost migrate
+2026-05-19 23:07:50,397 INFO /home/sjayp/.local/bin/bench restart
+2026-05-19 23:19:29,513 INFO /home/sjayp/.local/bin/bench --site coop.localhost migrate
+2026-05-19 23:19:41,128 INFO /home/sjayp/.local/bin/bench restart
+2026-05-20 01:15:10,447 INFO /home/sjayp/.local/bin/bench --site coop.localhost execute frappe.db.sql --args "UPDATE `tabReport` SET report_type='Script Report' WHERE name IN ('Member Statement Report', 'Loan Status Report')"
+2026-05-20 01:15:39,332 INFO /home/sjayp/.local/bin/bench --site coop.localhost console
+2026-05-20 01:17:29,429 INFO /home/sjayp/.local/bin/bench --site coop.localhost clear-cache
+2026-05-20 01:17:39,825 INFO /home/sjayp/.local/bin/bench restart
+2026-05-20 01:21:30,799 INFO /home/sjayp/.local/bin/bench --site coop.localhost clear-cache
+2026-05-20 01:21:43,044 INFO /home/sjayp/.local/bin/bench --site coop.localhost clear-website-cache
+2026-05-20 01:21:48,634 INFO /home/sjayp/.local/bin/bench stop
+2026-05-20 01:22:56,184 INFO /home/sjayp/.local/bin/bench stop
+2026-05-20 01:23:17,017 INFO /home/sjayp/.local/bin/bench start
+2026-05-20 01:23:18,280 INFO /home/sjayp/.local/bin/bench watch
+2026-05-20 01:23:18,308 INFO /home/sjayp/.local/bin/bench serve --port 8000
+2026-05-20 01:23:18,312 INFO /home/sjayp/.local/bin/bench schedule
+2026-05-20 01:23:18,315 INFO /home/sjayp/.local/bin/bench worker
+2026-05-20 01:33:21,169 INFO /home/sjayp/.local/bin/bench --site coop.localhost clear-cache
+2026-05-20 01:33:41,411 INFO /home/sjayp/.local/bin/bench start
+2026-05-20 01:33:41,780 INFO /home/sjayp/.local/bin/bench watch
+2026-05-20 01:33:41,780 INFO /home/sjayp/.local/bin/bench serve --port 8000
+2026-05-20 01:33:41,789 INFO /home/sjayp/.local/bin/bench schedule
+2026-05-20 01:33:41,797 INFO /home/sjayp/.local/bin/bench worker
+2026-05-20 01:34:15,192 INFO /home/sjayp/.local/bin/bench --site coop.localhost console
+2026-05-20 01:42:56,815 INFO /home/sjayp/.local/bin/bench --site coop.localhost clear-cache
+2026-05-20 01:43:17,594 INFO /home/sjayp/.local/bin/bench restart
+2026-05-20 01:43:28,316 INFO /home/sjayp/.local/bin/bench start
+2026-05-20 01:43:28,832 INFO /home/sjayp/.local/bin/bench serve --port 8000
+2026-05-20 01:43:28,838 INFO /home/sjayp/.local/bin/bench schedule
+2026-05-20 01:43:28,840 INFO /home/sjayp/.local/bin/bench watch
+2026-05-20 01:43:28,848 INFO /home/sjayp/.local/bin/bench worker
+2026-05-20 01:43:52,195 INFO /home/sjayp/.local/bin/bench --site coop.localhost console
+2026-05-20 02:05:42,119 INFO /home/sjayp/.local/bin/bench --site coop.localhost clear-cache
+2026-05-20 02:05:55,986 INFO /home/sjayp/.local/bin/bench restart
+2026-05-20 02:06:09,978 INFO /home/sjayp/.local/bin/bench --site coop.localhost console
+2026-05-20 02:08:56,102 INFO /home/sjayp/.local/bin/bench --site coop.localhost uninstall-app coop_manager --yes
+2026-05-20 02:09:06,441 INFO /home/sjayp/.local/bin/bench start
+2026-05-20 02:09:06,814 INFO /home/sjayp/.local/bin/bench watch
+2026-05-20 02:09:06,820 INFO /home/sjayp/.local/bin/bench worker
+2026-05-20 02:09:06,822 INFO /home/sjayp/.local/bin/bench serve --port 8000
+2026-05-20 02:09:06,835 INFO /home/sjayp/.local/bin/bench schedule
+2026-05-20 02:09:17,423 INFO /home/sjayp/.local/bin/bench --site coop.localhost uninstall-app coop_manager --yes
+2026-05-20 02:10:14,288 INFO /home/sjayp/.local/bin/bench --site coop.localhost clear-cache
