@@ -25,3 +25,21 @@
 2026-05-20 11:17:16,012 INFO ipython print(disburse("LOAN-2026-00001"))
 2026-05-20 11:17:16,013 INFO ipython frappe.db.commit()
 2026-05-20 11:17:16,013 INFO ipython === session end ===
+2026-05-20 21:05:03,740 INFO ipython === bench console session ===
+2026-05-20 21:05:03,764 INFO ipython import frappe
+2026-05-20 21:05:03,764 INFO ipython # Fix all existing loans - recompute monthly repayment and outstanding
+2026-05-20 21:05:03,764 INFO ipython for loan in frappe.get_all("Coop Loan", pluck="name"):
+        doc = frappe.get_doc("Coop Loan", loan)
+            if doc.loan_amount and doc.repayment_period_months:
+                        doc.monthly_repayment = doc.loan_amount / doc.repayment_period_months
+2026-05-20 21:05:03,764 INFO ipython         total_repaid = frappe.db.sql("""
+            SELECT COALESCE(SUM(amount_paid),0) FROM `tabCoop Loan Repayment`
+                WHERE loan=%s AND docstatus=1
+                """, loan)[0][0] or 0
+2026-05-20 21:05:03,765 INFO ipython         doc.total_repaid = total_repaid
+2026-05-20 21:05:03,765 INFO ipython         doc.outstanding_balance = doc.loan_amount - total_repaid
+2026-05-20 21:05:03,765 INFO ipython         doc.save(ignore_permissions=True)
+2026-05-20 21:05:03,765 INFO ipython         print(f"{loan}: loan={doc.loan_amount}, repaid={total_repaid}, outstanding={doc.outstanding_balance}")
+2026-05-20 21:05:03,766 INFO ipython frappe.db.commit()
+2026-05-20 21:05:03,766 INFO ipython print("Done")
+2026-05-20 21:05:03,766 INFO ipython === session end ===

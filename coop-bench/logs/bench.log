@@ -60,3 +60,8 @@
 2026-05-20 11:17:06,094 INFO /home/sjayp/.local/bin/bench --site coop.localhost console
 2026-05-20 15:43:30,542 INFO /home/sjayp/.local/bin/bench --site coop.localhost clear-cache
 2026-05-20 15:43:42,134 INFO /home/sjayp/.local/bin/bench restart
+2026-05-20 21:03:50,956 INFO /home/sjayp/.local/bin/bench --site coop.localhost console
+2026-05-20 21:05:10,983 INFO /home/sjayp/.local/bin/bench --site coop.localhost console
+2026-05-20 21:09:45,723 INFO /home/sjayp/.local/bin/bench --site coop.localhost execute frappe.db.sql --args "UPDATE `tabCoop Loan` SET monthly_repayment = loan_amount / repayment_period_months WHERE loan_amount > 0 AND repayment_period_months > 0"
+2026-05-20 21:09:46,560 INFO /home/sjayp/.local/bin/bench --site coop.localhost clear-cache
+2026-05-20 21:09:56,297 INFO /home/sjayp/.local/bin/bench restart
