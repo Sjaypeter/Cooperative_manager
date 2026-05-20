@@ -1,0 +1,27 @@
+2026-05-20 10:55:35,708 INFO ipython === bench console session ===
+2026-05-20 10:55:35,708 INFO ipython from coop_manager.cooperative_manager.report.member_statement_report.member_statement_report import execute
+2026-05-20 10:55:35,708 INFO ipython print("OK")
+2026-05-20 10:55:35,709 INFO ipython === session end ===
+2026-05-20 11:01:20,726 INFO ipython === bench console session ===
+2026-05-20 11:01:20,727 INFO ipython import frappe
+2026-05-20 11:01:20,727 INFO ipython frappe.set_user("Administrator")
+2026-05-20 11:01:20,727 INFO ipython from coop_manager.cooperative_manager.doctype.coop_loan.coop_loan import disburse
+2026-05-20 11:01:20,727 INFO ipython print(disburse("LOAN-2026-00001"))
+2026-05-20 11:01:20,727 INFO ipython frappe.db.commit()
+2026-05-20 11:01:20,727 INFO ipython === session end ===
+2026-05-20 11:07:36,366 INFO ipython === bench console session ===
+2026-05-20 11:07:36,366 INFO ipython import frappe
+2026-05-20 11:07:36,366 INFO ipython # Check exact field names in the Coop Loan table
+2026-05-20 11:07:36,366 INFO ipython fields = frappe.db.sql("DESCRIBE `tabCoop Loan`", as_dict=True)
+2026-05-20 11:07:36,366 INFO ipython for f in fields:
+        print(f['Field'])
+        exit()
+        
+2026-05-20 11:07:36,366 INFO ipython === session end ===
+2026-05-20 11:17:16,011 INFO ipython === bench console session ===
+2026-05-20 11:17:16,012 INFO ipython import frappe
+2026-05-20 11:17:16,012 INFO ipython frappe.set_user("Administrator")
+2026-05-20 11:17:16,012 INFO ipython from coop_manager.cooperative_manager.doctype.coop_loan.coop_loan import disburse
+2026-05-20 11:17:16,012 INFO ipython print(disburse("LOAN-2026-00001"))
+2026-05-20 11:17:16,013 INFO ipython frappe.db.commit()
+2026-05-20 11:17:16,013 INFO ipython === session end ===
